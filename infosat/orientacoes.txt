@@ -1,0 +1,38 @@
+﻿
+============================================================
+       GUIA DE USO - SISTEMA DE MONITORAMENTO INFOSAT - WEG
+============================================================
+
+1. LINUX (Ubuntu, Debian, CentOS, etc.)
+   - Certifique-se de ter o 'mtr' instalado: sudo apt install mtr
+   - Dê permissão de execução: chmod +x monitor_linux.sh
+   - Rode o script: ./monitor_linux.sh
+   - Os logs aparecerão na pasta /logs.
+
+
+3. WINDOWS (PowerShell)
+   - Clique com o botão direito no arquivo 'monitor_windows.ps1'.
+   - Selecione "Executar com o PowerShell".
+   - Se o Windows bloquear, abra o PowerShell como Administrador e digite:
+     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+   - Confirme com 'S' e tente rodar o script novamente.
+
+OBSERVAÇÕES:
+- A pasta 'logs' será criada automaticamente no mesmo local dos scripts.
+- O MAC Address só é capturado para dispositivos na mesma rede local (LAN).
+============================================================
+
+
+COMANDOS PARA TERMINAL POWERSHELL
+==================================
+permissao de execucao
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+-permissao de arquivos-
+Unblock-File .\monitoramento.ps1
+
+-liberar provisorio
+powershell -ExecutionPolicy Bypass -File .\monitoramento.ps1
+
+-para executar
+.\monitoramento.ps1
