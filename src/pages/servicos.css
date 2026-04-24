@@ -1,0 +1,74 @@
+.servicos-container {
+  padding: 85px 20px 40px; /* 85px para dar espaço ao Header fixo */
+  background-color: #f8f9fa; /* Fundo cinza bem claro igual ao print */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Banner Superior */
+.acesso-rapido-banner {
+  width: 100%;
+  max-width: 500px;
+  background-color: #f1f3f9;
+  color: #334155;
+  padding: 12px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Grid de 2 colunas */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Estilo do Card */
+.card-servico {
+  background-color: #ffffff;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px; /* Cantos bem arredondados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03); /* Sombra quase imperceptível */
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-servico:active {
+  transform: scale(0.95); /* Efeito de clique */
+  background-color: #fcfcfc;
+}
+
+.card-nome {
+  color: #1e293b;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* O traço colorido embaixo do texto */
+.card-indicator {
+  width: 25px;
+  height: 4px;
+  border-radius: 10px;
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 350px) {
+  .card-nome {
+    font-size: 13px;
+  }
+}

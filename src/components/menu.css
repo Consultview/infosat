@@ -1,0 +1,140 @@
+/* HEADER */
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* ÍCONE HAMBÚRGUER MODERNO */
+.nav-icon {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #1e293b;
+  border-radius: 4px;
+  transition: .3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+.nav-icon span:nth-child(1) { top: 0px; width: 70%; right: 0; }
+.nav-icon span:nth-child(2) { top: 8px; width: 100%; }
+.nav-icon span:nth-child(3) { top: 16px; width: 40%; right: 0; }
+
+/* Animação para o "X" moderno */
+.nav-icon.open span:nth-child(1) { top: 8px; transform: rotate(45deg); width: 100%; }
+.nav-icon.open span:nth-child(2) { opacity: 0; }
+.nav-icon.open span:nth-child(3) { top: 8px; transform: rotate(-45deg); width: 100%; }
+
+/* DRAWER QUE VEM DA ESQUERDA */
+.sidebar-drawer {
+  position: fixed;
+  top: 0;
+  left: -280px; /* Escondido totalmente à esquerda */
+  width: 280px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 1001;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+  padding: 20px 0;
+}
+
+.sidebar-drawer.active {
+  transform: translateX(280px); /* Move ele para a visão */
+}
+
+.drawer-header {
+  padding: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 10px;
+}
+
+.drawer-title {
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.drawer-nav {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-link {
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.drawer-link:hover {
+  background: #f8fafc;
+  color: #3b82f6;
+  padding-left: 25px;
+}
+
+.drawer-divider {
+  height: 1px;
+  background: #f1f5f9;
+  margin: 15px 20px;
+}
+
+.drawer-logout {
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #ef4444;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.drawer-logout:hover {
+  background: #fef2f2;
+}
+
+/* BACKDROP */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(4px); /* Efeito de desfoque moderno */
+  z-index: 1000;
+}

@@ -1,0 +1,15 @@
+:root {
+  --primary: #004a99;
+  --bg: #f4f7f6;
+  --sidebar: #2c3e50;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+}
+
+.flex-container { display: flex; min-height: 100vh; }
+.main-content { flex: 1; padding: 20px; }
